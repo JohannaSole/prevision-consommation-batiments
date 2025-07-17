@@ -1,50 +1,54 @@
-# Projet 4 - Prévision des émissions de CO2 et de la consommation énergétique des bâtiments non résidentiels
+# Prévision des émissions de CO2 et de la consommation énergétique des bâtiments non résidentiels
 
 ## Contexte
 
-Vous travaillez pour la ville de Seattle, dans le cadre de son objectif de devenir une ville neutre en émissions de carbone d'ici 2050. Votre équipe s'intéresse particulièrement à la consommation et aux émissions des bâtiments non destinés à l'habitation.
+Ce projet s’inscrit dans l’objectif de la ville de Seattle de devenir neutre en émissions de carbone d’ici 2050. L’analyse porte sur la consommation énergétique et les émissions de CO2 des bâtiments non résidentiels.
 
-En 2016, des relevés ont été effectués par les agents de la ville. Cependant, ces relevés sont coûteux à obtenir. Vous êtes missionné pour prédire les émissions de CO2 et la consommation totale d’énergie pour des bâtiments non résidentiels pour lesquels ces données n'ont pas encore été mesurées. 
+Les relevés de 2016, bien que complets, sont coûteux à obtenir. Le projet vise donc à prédire ces données pour des bâtiments non mesurés, à partir de leurs caractéristiques structurelles (taille, usage, date de construction, localisation, etc.).
 
-La prédiction se basera sur les données structurelles des bâtiments : taille, usage, date de construction, situation géographique, etc. Vous devez aussi évaluer l’utilité de l’"ENERGY STAR Score" pour la prédiction des émissions.
+L’utilité de l’**ENERGY STAR Score** sera également évaluée dans le cadre des prédictions.
 
 ## Objectifs
 
-1. **Analyse exploratoire des données** : Nettoyage et préparation des données avant la modélisation.
-2. **Modélisation des prédictions** :
-   - Prédire les émissions de CO2.
-   - Prédire la consommation totale d'énergie.
-3. **Évaluation des modèles** : Test des performances de différents modèles de Machine Learning.
-4. **Optimisation des modèles** : Validation croisée et optimisation des hyperparamètres.
-5. **Évaluation de l'impact de l'ENERGY STAR Score**.
+- Effectuer une analyse exploratoire des données : nettoyage, préparation et visualisation  
+- Modéliser les prédictions des émissions de CO2 et de la consommation énergétique totale  
+- Tester plusieurs modèles de Machine Learning :  
+  - Régression linéaire  
+  - Random Forest  
+  - XGBoost  
+  - Support Vector Machine (SVM)  
+- Optimiser les modèles par validation croisée et réglage des hyperparamètres  
+- Évaluer l’impact de l’ENERGY STAR Score sur la qualité des prédictions  
 
 ## Méthodes utilisées
 
-Les modèles de Machine Learning testés sont :
-
-- **Régression linéaire** : Un modèle simple pour tester la linéarité des relations.
-- **Random Forest** : Un modèle d'ensemble basé sur des arbres de décision, robuste aux surajustements.
-- **XGBoost** : Un modèle basé sur le boosting de gradient pour de meilleures performances.
-- **Support Vector Machine (SVM)** : Utilisé pour classifier et régression avec des marges maximales.
-
-Les transformations des données incluent la normalisation, les transformations logarithmiques et la gestion des variables catégorielles.
+- Nettoyage et préparation des données, incluant normalisation, transformations logarithmiques et encodage des variables catégorielles  
+- Mise en œuvre de modèles supervisés pour régression  
+- Analyse comparative des performances des modèles  
 
 ## Structure du projet
 
-1. **Notebook d'analyse exploratoire** : Ce notebook contient l'exploration et le nettoyage des données, ainsi que des visualisations pour mieux comprendre les relations dans les données.
-   - `Sole_Johanna_1_notebook_exploratoire_122024.ipynb`
-   
-2. **Notebooks de modélisation** : Des notebooks distincts pour les tests de modèles de prédiction des émissions de CO2 et de la consommation d’énergie.
-   - `Sole_Johanna_2_notebook_prediction_122024.ipynb` (Cible 1 : **TotalGHGEmissions**)
-   - `Sole_Johanna_3_notebook_prediction_122024.ipynb` (Cible 2 : **SiteEnergyUse(kBtu)**)
+- **Notebook d’analyse exploratoire :**  
+  `Sole_Johanna_1_notebook_exploratoire_122024.ipynb`  
+- **Notebooks de modélisation :**  
+  - `Sole_Johanna_2_notebook_prediction_122024.ipynb` (Cible 1 : TotalGHGEmissions)  
+  - `Sole_Johanna_3_notebook_prediction_122024.ipynb` (Cible 2 : SiteEnergyUse(kBtu))  
+- **Présentation des résultats :**  
+  `Johanna_Sole_4_presentation_122024.pdf`  
 
-3. **Présentation** : Un fichier PDF présentant les résultats de l'analyse et de la modélisation.
-   - `Johanna_Sole_4_presentation_122024.pdf`
+## Données
+
+Les données proviennent du **Building Energy Benchmarking Data (2015-Present)**, accessibles via le site officiel de la ville de Seattle, avec documentation complète des variables.
 
 ## Résultats attendus
 
-- Un modèle performant capable de prédire avec précision les émissions de CO2 et la consommation énergétique des bâtiments.
-- Une analyse de l'impact de l'ENERGY STAR Score sur la précision des prédictions.
+- Modèle prédictif performant des émissions de CO2 et de la consommation énergétique des bâtiments  
+- Analyse détaillée de l’apport de l’ENERGY STAR Score dans la précision des prédictions  
+
+## Auteur
+
+Johanna Solé  
+Projet réalisé dans le cadre d’une formation Data Scientist.
 
 ## Données
 
